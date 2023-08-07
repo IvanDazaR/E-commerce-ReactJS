@@ -1,15 +1,24 @@
-import { XMarkIcon } from "@heroicons/react/24/solid";
+import { CurrencyDollarIcon, CalendarDaysIcon, ShoppingCartIcon  } from "@heroicons/react/24/solid";
 
 const OrdersCard = props => {
-    const { totalProducts, totalPrice } = props;
-    
-    return(
-        <div className='flex justify-between items-center mb-3 border border-black'>
-            <p>
-                <span>06.08.2023</span>
-                <span>{totalProducts} </span>
-                <span>{totalPrice} </span>
-            </p>
+    const { date,totalProducts, totalPrice } = props;
+    // console.log(date.toString())
+    return (
+        <div className='flex  gap-5 justify-between items-center mb-3 border rounded-lg p-3 w-80'>
+            <div className='flex gap-1 items-center justify-center'>
+                <ShoppingCartIcon className='h-6 w-6 text-black' />
+                <p><span>{totalProducts}</span></p>
+            </div>
+
+            <div className='flex gap-1 items-center justify-center'>
+                <CalendarDaysIcon className='h-6 w-6 text-black' />
+                <p><span>{date}</span></p>
+            </div>
+
+            <div className='flex gap-1 items-center justify-center'>
+                <CurrencyDollarIcon className='h-6 w-6 text-black' />
+                <p><span>{totalPrice} </span></p>
+            </div>
         </div>
     );
 }

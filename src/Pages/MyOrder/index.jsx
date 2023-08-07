@@ -5,9 +5,21 @@ import { ShoppingCartContext } from "../../Context";
 import Layout from "../../Components/Layout";
 import OrderCard from "../../Components/OrderCard";
 
+import { useParams } from "react-router-dom";
+
 function MyOrder() {
   const context = useContext(ShoppingCartContext);
 
+   const params = useParams();
+   const indexOrderPath = Number(params.id);
+  
+  const indexOrder = () => {
+    if(!isNaN(indexOrderPath)){
+      return context.order?.[indexOrderPath];
+    }else if(isNaN(indexOrderPath)){
+      return context.order?.slice(-1)[0];
+    }
+  }
     return (
         <Layout>
           <div className='flex items-center justify-center relative w-80 mb-6'>
@@ -18,12 +30,12 @@ function MyOrder() {
           </div>
           <div className='flex flex-col w-80'>
             {
-                context.order?.slice(-1)[0].products.map(product => (
+                indexOrder()?.products.map(product => (
                     <OrderCard 
                         key={product.id}
                         id={product.id}
                         title={product.title}
-                        imageUrl={product.images}
+                        imageUrl={product.images[0]}
                         price={product.price}
                     />
                 ))
