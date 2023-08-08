@@ -2,7 +2,7 @@ import { ChevronRightIcon, CurrencyDollarIcon, CalendarDaysIcon, ShoppingCartIco
 
 const OrdersCard = props => {
     const { date,totalProducts, totalPrice } = props;
-    // console.log(date.toString())
+
     return (
         <div className='flex  gap-5 justify-between items-center mb-3 border rounded-lg p-3 w-80'>
             <div className='flex gap-1 items-center justify-center'>
