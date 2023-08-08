@@ -1,4 +1,4 @@
-import { CurrencyDollarIcon, CalendarDaysIcon, ShoppingCartIcon  } from "@heroicons/react/24/solid";
+import { ChevronRightIcon, CurrencyDollarIcon, CalendarDaysIcon, ShoppingCartIcon  } from "@heroicons/react/24/solid";
 
 const OrdersCard = props => {
     const { date,totalProducts, totalPrice } = props;
@@ -18,6 +18,7 @@ const OrdersCard = props => {
             <div className='flex gap-1 items-center justify-center'>
                 <CurrencyDollarIcon className='h-6 w-6 text-black' />
                 <p><span>{totalPrice} </span></p>
+                <ChevronRightIcon className='h-6 w-6 text-black'/>
             </div>
         </div>
     );
