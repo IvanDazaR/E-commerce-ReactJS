@@ -1,12 +1,16 @@
-<<<<<<< HEAD
-# React + Vite
+# E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Build an Ecommerce with React.js, the most popular tool for frontend developers. It integrates Vite.js for the development environment, TailwindCSS for styling, and React Router DOM for routing and navigation. 
+Visit -> [E-Commerce](https://gilded-heliotrope-daa082.netlify.app/)
 
-Currently, two official plugins are available:
+## Responsabilities
+- Build components to view products, purchase orders and filter by categories.
+- Implement client-side navigation with React Router.
+- Consume the Platzi Fake Store (API) using React.js.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
-# E-commers-ReactJS
->>>>>>> 5f00bbe05e71362ec2a6756abcd83968bab754fd
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Project status
+This project is in construction. This is the first version of the E-commerce project.
