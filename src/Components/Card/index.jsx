@@ -8,7 +8,7 @@ const Card = ({ data }) => {
     const showProduct = (productDetail) => {
         context.openProductDetail();
         context.setProductToShow(productDetail);
-        context.closeCheckoutSideMenu(); // I put this to close the addProductToCart by myself
+        context.closeCheckoutSideMenu();
     }
     const addProductsToCart = (event, productData) => {
         event.stopPropagation();

@@ -107,12 +107,12 @@ const Navbar = () => {
                 </li>
                 <li>
                     <NavLink 
-                    to='/sing-in'
+                    to='/sign-in'
                     className ={( {isActive} ) => 
                         isActive ? activeStyle : undefined
                     }
                     >
-                        Sing In
+                        Sign In
                     </NavLink>
                 </li>
                 <li className='flex items-center'>
