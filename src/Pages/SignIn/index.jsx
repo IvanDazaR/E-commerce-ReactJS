@@ -6,6 +6,7 @@ function SignIn() {
     const [name, setName] = useState({field:'', valid: null})
     const [email, setEmail] = useState({field: '', valid: null})
     const [password, setPassword] = useState({field: '', valid: null})
+    const [validForm, setValidForm] = useState(null);
     
     const regex = {
       // name: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guion_bajo
@@ -16,7 +17,21 @@ function SignIn() {
 
     const onSubmit = (event) => {
       event.preventDefault();
-
+      if (
+        name.valid  === 'true' &&
+        email.valid  === 'true' &&
+        password.valid === 'true' 
+      ){
+        setValidForm(true);
+        setName({field: '', valid: null});
+        setEmail({field: '', valid: null});
+        setPassword({field: '', valid: null});
+        setTimeout(() => {
+          setValidForm(null);
+        }, 2000);
+      } else {
+        setValidForm(false);
+      }
     }
     return (
         <Layout>
@@ -53,10 +68,15 @@ function SignIn() {
                 regex={regex.password}
               />
              
-              <div className='flex justify-center'>
+              <div className='flex flex-col justify-center'>
                 <button className='bg-black text-white w-full h-10 rounded'>
                   Create
                 </button>
+                {validForm === true ? 
+                  <p className='text-green-600'>Form sent successfully!</p>
+                  : validForm === false ? <p className='text-red-600'><b>Error:</b> Please fill out the form correctly</p>
+                  : null
+                }
               </div>
             </form>
         </Layout>
