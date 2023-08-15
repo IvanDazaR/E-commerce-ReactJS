@@ -1,7 +1,9 @@
-import React from 'react';
+import { React } from 'react';
 import { XCircleIcon, CheckCircleIcon } from '@heroicons/react/24/solid';
 
 const Input = ({regex, tipo, label, placeholder, name, legend, state, setState}) => {
+  
+
 	const onChange = (event) => {
         setState({
             ...state,
@@ -22,21 +24,22 @@ const Input = ({regex, tipo, label, placeholder, name, legend, state, setState})
             })
         }
     }
-    
+   
 	return (
 		<div>
 			<label className={`${state.valid === 'false' && 'text-red-600'}`} htmlFor={name}>{label}</label>
 			<div className='relative'>
 				<input 
-                    className={`${state.valid === 'false' && 'border-red-600'} border w-full rounded-lg p-2 mb-4 focus:outline-none`}
 					type={tipo}
-					placeholder={placeholder} 
 					id={name}
+					name={name}
 					value={state.field}
 					onChange={onChange}
 					onKeyUp={validation}
 					onBlur={validation}
 					valid={state.valid}
+                    className={`${state.valid === 'false' && 'border-red-600'} border w-full rounded-lg p-2 mb-4 focus:outline-none`}
+					placeholder={placeholder} 
 				/>
                 <div className={`${state.valid === 'false' ? 'opacity-100 text-red-600' : state.valid === 'true' ? 'opacity-100 text-green-600' : 'opacity-0'} absolute right-2 bottom-6 `}>
                     { state.valid === 'true' ?
