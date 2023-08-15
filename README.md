@@ -1,7 +1,7 @@
 # E-commerce
 
 Build an Ecommerce with React.js, the most popular tool for frontend developers. It integrates Vite.js for the development environment, TailwindCSS for styling, and React Router DOM for routing and navigation. 
-Visit -> [E-Commerce](https://gilded-heliotrope-daa082.netlify.app/)
+Visit -> [E-Commerce](https://e-commecers.netlify.app/)
 
 ## Responsabilities
 - Build components to view products, purchase orders and filter by categories.
