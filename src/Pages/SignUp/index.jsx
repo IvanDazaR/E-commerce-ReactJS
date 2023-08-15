@@ -38,13 +38,13 @@ function SignUp() {
   }
   // const createAnAccount = () => {
   //   const formData = new FormData(form.current)
-  //   console.log('FORM_CURRENT :', form.current);
+  
   //   const data = {
   //     name: formData.get('name'),
   //     email: formData.get('email'),
   //     password: formData.get('password'),
   //   }
-  //   console.log('DATA: ',data)
+ 
   // }
   return (
     // <form  onSubmit={onSubmit} className='w-80'>
